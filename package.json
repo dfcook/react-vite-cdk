@@ -1,0 +1,21 @@
+{
+  "name": "@react-vite-cdk/root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "lerna exec --scope @react-vite-cdk/app -- npm run build",
+    "test": "lerna exec --scope @react-vite-cdk/app -- npm test",
+    "lint:fix": "lerna exec --scope @react-vite-cdk/app -- npm run lint:fix",
+    "lint": "lerna exec --scope @react-vite-cdk/app -- npm run lint",
+    "dev": "lerna exec --scope @react-vite-cdk/app -- npm run dev",
+    "deploy": "lerna exec --scope @react-vite-cdk/cdk -- cdk deploy"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^5.4.3"
+  }
+}
